@@ -24,6 +24,9 @@ public class OrderController {
         Assert.notNull(goodsId,"goodsId不能为null");
         Map<String,Object> result = new HashMap<>();
         result.put("goodsName","电脑");
+
+
+
         result.put("goodsPrice","5000");
         result.put("num",1);
         return result;
