@@ -164,20 +164,6 @@
                 </configuration>
             </plugin>
 
-            <!--spring boot打包插件 生成可独立运行的jar文件-->
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>${spring.boot.version}</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-
             <!--管理项目版本 Reference:https://www.jianshu.com/p/88da01804d3c-->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>

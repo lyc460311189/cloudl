@@ -1,9 +1,11 @@
 package com.lyc.test.controller;
 
+import com.lyc.test.RedisUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
@@ -25,6 +27,10 @@ public class StockController {
     @Autowired
     private RestTemplate restTemplate;
 
+
+    @Autowired
+    private RedisUtil redisUtil;
+
     @RequestMapping(value = "/get/{id}")
     public Object getById(@PathVariable Integer id){
         Assert.notNull(id,"id不能为null");
@@ -34,5 +40,13 @@ public class StockController {
         String returnStr =  restTemplate.getForObject("http://order-service/createOrder/1",String.class);
         System.out.println(returnStr);
         return result;
+    }
+
+
+    @RequestMapping(value = "/test/redis")
+    public Object add(@RequestParam(required = false) String name){
+        System.out.println(name);
+        redisUtil.set("name",name);
+        return name;
     }
 }
