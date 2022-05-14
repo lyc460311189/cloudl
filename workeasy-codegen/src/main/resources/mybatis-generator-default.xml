@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <context id="context" targetRuntime="MyBatis3" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
+        <plugin type="com.dwise.workeasy.codegen.mbg.plugin.OverridePlugin">
+            <property name="backup" value="false"/>
+            <property name="backupDirectory" value="/Users/lvjingran/temp/"/>
+        </plugin>
+        <plugin type="com.dwise.workeasy.codegen.mbg.plugin.LombokDataPlugin"/>
+
+
+        <plugin type="com.dwise.workeasy.codegen.mbg.plugin.ModelToExamplePlugin"/>
+<!--        <plugin type="com.dwise.workeasy.codegen.mbg.plugin.CodegenPlugin">-->
+<!--            <property name="serviceTargetProject" value="workeasy-business/workeasy-worddictionary/src/main/java"/>-->
+<!--            <property name="serviceTargetPackage" value="com.dwise.workeasy.service"/>-->
+<!--            <property name="controllerTargetProject" value="workeasy-business/workeasy-worddictionary/src/main/java"/>-->
+<!--            <property name="controllerTargetPackage" value="com.dwise.workeasy.controller"/>-->
+<!--        </plugin>-->
+
+
+        <commentGenerator type="com.dwise.workeasy.codegen.mbg.comment.CodegenCommentGenerator">
+            <!--使用@mbg.generated表示代码是否可以被覆盖-->
+            <property name="suppressAllComments" value="false"/>
+            <property name="suppressDate" value="true"/>
+            <property name="addRemarkComments" value="true"/>
+            <property name="dateFormat" value="yyyy/MM/dd HH:mm:ss"/>
+        </commentGenerator>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://106.75.93.60:3306/time_hx_new"
+                        userId="root"
+                        password="Dypt201q">
+<!--            <property name="useInformationSchema" value="true"/>-->
+        </jdbcConnection>
+
+<!--        <javaModelGenerator targetPackage="com.dwise.workeasy.model" targetProject="workeasy-business/workeasy-hx/src/main/java">-->
+<!--            <property name="trimStrings" value="false" />-->
+<!--        </javaModelGenerator>-->
+<!--        <sqlMapGenerator targetPackage="mapper"  targetProject="workeasy-business/workeasy-hx/src/main/resources"/>-->
+<!--        <javaClientGenerator type="XMLMAPPER" targetPackage="com.dwise.workeasy.mapper" targetProject="workeasy-business/workeasy-hx/src/main/java"/>-->
+<!--        <table tableName="new_knowledge_map">-->
+<!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+<!--        </table>-->
+<!--        <table tableName="new_knowledge_map">-->
+<!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+<!--        </table>-->
+<!--        <table tableName="new_knowledge_map_module">-->
+<!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+<!--        </table>-->
+<!--        <table tableName="new_knowledge_map_module_knowledge">-->
+<!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+<!--        </table>-->
+<!--        <table tableName="new_knowledge_map_module_knowledge_user">-->
+<!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+<!--        </table>-->
+<!--        <table tableName="new_knowledge_map_module_user">-->
+<!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+<!--        </table>-->
+<!--        <table tableName="project_count_year_score">-->
+<!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+<!--        </table>-->
+<!--        <table tableName="alert_user">-->
+<!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+<!--        </table>-->
+
+
+        <!--        <javaModelGenerator targetPackage="com.dwise.workeasy.model" targetProject="workeasy-business/workeasy-china-area/src/main/java">-->
+        <!--            <property name="trimStrings" value="false" />-->
+        <!--        </javaModelGenerator>-->
+        <!--        <sqlMapGenerator targetPackage="mapper"  targetProject="workeasy-business/workeasy-china-area/src/main/resources"/>-->
+        <!--        <javaClientGenerator type="XMLMAPPER" targetPackage="com.dwise.workeasy.mapper" targetProject="workeasy-business/workeasy-china-area/src/main/java"/>-->
+        <!--        <table tableName="cnarea_2017">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+
+
+        <!--        <javaModelGenerator targetPackage="com.dwise.workeasy.model" targetProject="workeasy-business/workeasy-file/src/main/java">-->
+        <!--            <property name="trimStrings" value="false" />-->
+        <!--        </javaModelGenerator>-->
+        <!--        <sqlMapGenerator targetPackage="mapper"  targetProject="workeasy-business/workeasy-file/src/main/resources"/>-->
+        <!--        <javaClientGenerator type="XMLMAPPER" targetPackage="com.dwise.workeasy.mapper" targetProject="workeasy-business/workeasy-file/src/main/java"/>-->
+        <!--        <table tableName="file_mapping">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+
+
+        <!--        <javaModelGenerator targetPackage="com.dwise.workeasy.model" targetProject="workeasy-business/workeasy-knowledge/src/main/java">-->
+        <!--            <property name="trimStrings" value="false" />-->
+        <!--        </javaModelGenerator>-->
+        <!--        <sqlMapGenerator targetPackage="mapper"  targetProject="workeasy-business/workeasy-knowledge/src/main/resources"/>-->
+        <!--        <javaClientGenerator type="XMLMAPPER" targetPackage="com.dwise.workeasy.mapper" targetProject="workeasy-business/workeasy-knowledge/src/main/java"/>-->
+        <!--        <table tableName="knowledge">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--            <columnOverride column="word_content" property="wordContent" jdbcType="VARCHAR"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="knowledge_comment">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="knowledge_map">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="knowledge_map_link">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="knowledge_tag">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="knowledge_task_project_link">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="knowledge_type">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="knowledge_user">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+
+        <!--        <javaModelGenerator targetPackage="com.dwise.workeasy.model" targetProject="workeasy-business/workeasy-project/src/main/java">-->
+        <!--            <property name="trimStrings" value="false" />-->
+        <!--        </javaModelGenerator>-->
+        <!--        <sqlMapGenerator targetPackage="mapper"  targetProject="workeasy-business/workeasy-project/src/main/resources"/>-->
+        <!--        <javaClientGenerator type="XMLMAPPER" targetPackage="com.dwise.workeasy.mapper" targetProject="workeasy-business/workeasy-project/src/main/java"/>-->
+
+        <!--        <table tableName="dynamic">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="dynamic_message">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="common_language">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="main_line">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="main_line_task_card">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="main_line_type">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="task_card_component">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="task_card_component_relation">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="task_card_label">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="task_card">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--            <columnOverride column="COMPONENT_DATA" jdbcType="VARCHAR" property="componentData"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="task_card_user">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="task_card_label_relation">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="task_card_type">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="task_cmtuser">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="task_execute">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="task_instance">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--            <columnOverride column="COMPONENT_DATA" jdbcType="VARCHAR" property="componentData"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="flow_stage">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--            <columnOverride column="level_" jdbcType="NUMERIC" property="level"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="task_instance_component_info">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="task_instance_user">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="task_instance_comment">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="project">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="project_flow_line">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="project_flow_line_user">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="project_user">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="flow_stage">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="message_board">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+
+        <!--        <javaModelGenerator targetPackage="com.dwise.workeasy.model" targetProject="workeasy-business/workeasy-result/src/main/java">-->
+        <!--            <property name="trimStrings" value="false" />-->
+        <!--        </javaModelGenerator>-->
+        <!--        <sqlMapGenerator targetPackage="mapper"  targetProject="workeasy-business/workeasy-result/src/main/resources"/>-->
+        <!--        <javaClientGenerator type="XMLMAPPER" targetPackage="com.dwise.workeasy.mapper" targetProject="workeasy-business/workeasy-result/src/main/java"/>-->
+        <!--        <table tableName="result">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+
+
+<!--        <javaModelGenerator targetPackage="com.dwise.workeasy.model"-->
+<!--                            targetProject="workeasy-business/workeasy-project/src/main/java">-->
+<!--            <property name="trimStrings" value="false"/>-->
+<!--        </javaModelGenerator>-->
+<!--        <sqlMapGenerator targetPackage="mapper" targetProject="workeasy-business/workeasy-project/src/main/resources"/>-->
+<!--        <javaClientGenerator type="XMLMAPPER" targetPackage="com.dwise.workeasy.mapper"-->
+<!--                             targetProject="workeasy-business/workeasy-project/src/main/java"/>-->
+
+<!--        <table tableName="common_language">-->
+<!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+<!--        </table>-->
+<!--        <table tableName="dynamic">-->
+<!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+<!--        </table>-->
+<!--        <table tableName="dynamic_message">-->
+<!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+<!--        </table>-->
+<!--        <table tableName="flow_stage">-->
+<!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+<!--        </table>-->
+<!--        <table tableName="main_line">-->
+<!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+<!--        </table>-->
+<!--        <table tableName="main_line_task_card">-->
+<!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+<!--        </table>-->
+<!--        <table tableName="main_line_type">-->
+<!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+<!--        </table>-->
+<!--        <table tableName="project_flow_line">-->
+<!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+<!--        </table>-->
+<!--        <table tableName="project_flow_line_user">-->
+<!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+<!--        </table>-->
+<!--        <table tableName="project">-->
+<!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+<!--        </table>-->
+<!--        <table tableName="project_user">-->
+<!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+<!--        </table>-->
+<!--        <table tableName="task_card_component">-->
+<!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+<!--        </table>-->
+
+<!--        <table tableName="task_card_component_relation">-->
+<!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+<!--        </table>-->
+
+<!--        <table tableName="task_card_label">-->
+<!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+<!--        </table>-->
+<!--        <table tableName="task_card_label_relation">-->
+<!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+<!--        </table>-->
+<!--        <table tableName="task_card">-->
+<!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+<!--        </table>-->
+<!--        <table tableName="task_card_type">-->
+<!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+<!--        </table>-->
+<!--        <table tableName="task_card_user">-->
+<!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+<!--        </table>-->
+<!--        <table tableName="task_instance_comment">-->
+<!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+<!--        </table>-->
+<!--        <table tableName="task_instance">-->
+<!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+<!--        </table>-->
+<!--        <table tableName="task_instance_user">-->
+<!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+<!--        </table>-->
+
+
+
+        <!--        <table tableName="role">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="department">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="user_base_info">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="user_login_info">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="user_role">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+
+
+        <!--        <javaModelGenerator targetPackage="com.dwise.workeasy.data.model" targetProject="workeasy-business/workeasy-recommendation/src/main/java">-->
+        <!--            <property name="trimStrings" value="false" />-->
+        <!--        </javaModelGenerator>-->
+        <!--        <sqlMapGenerator targetPackage="mapper"  targetProject="workeasy-business/workeasy-recommendation/src/main/resources"/>-->
+        <!--        <javaClientGenerator type="XMLMAPPER" targetPackage="com.dwise.workeasy.data.mapper" targetProject="workeasy-business/workeasy-recommendation/src/main/java"/>-->
+        <!--        <table tableName="recommendation_action">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="recommendation_event">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="recommendation_item">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="recommendation_item_to_item">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="recommendation_item_to_user">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+        <!--        <table tableName="recommendation_user">-->
+        <!--            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>-->
+        <!--        </table>-->
+
+        <javaModelGenerator targetPackage="com.dwise.workeasy.model" targetProject="workeasy-business/workeasy-hx/src/main/java">
+            <property name="trimStrings" value="false" />
+            <property name="delimitIdentifiers" value="true" />
+            <property name="useActualColumnNames" value="true"/>
+        </javaModelGenerator>
+        <sqlMapGenerator targetPackage="mapper"  targetProject="workeasy-business/workeasy-hx/src/main/resources"/>
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.dwise.workeasy.mapper" targetProject="workeasy-business/workeasy-hx/src/main/java"/>
+        <table tableName="dept_form6_3_list">
+            <generatedKey identity="true" column="id" sqlStatement="JDBC"/>
+        </table>
+    </context>
+</generatorConfiguration>

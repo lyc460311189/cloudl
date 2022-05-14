@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lyc.test.mapper.SysUserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.lyc.test.model.SysUser">
+        <id column="id" property="id" />
+        <result column="user_name" property="user_name" />
+        <result column="mobile" property="mobile" />
+        <result column="password" property="password" />
+        <result column="salt" property="salt" />
+        <result column="nick_name" property="nick_name" />
+        <result column="user_state" property="user_state" />
+        <result column="is_lock" property="is_lock" />
+        <result column="department_id" property="department_id" />
+        <result column="is_delete" property="is_delete" />
+        <result column="email" property="email" />
+        <result column="sex" property="sex" />
+        <result column="position" property="position" />
+        <result column="create_time" property="create_time" />
+        <result column="update_time" property="update_time" />
+        <result column="creator_id" property="creator_id" />
+        <result column="job_state" property="job_state" />
+        <result column="safe_level" property="safe_level" />
+        <result column="is_leader" property="is_leader" />
+        <result column="last_login_time" property="last_login_time" />
+        <result column="login_count" property="login_count" />
+        <result column="avatar" property="avatar" />
+        <result column="user_type" property="user_type" />
+        <result column="unit_id" property="unit_id" />
+        <result column="major_ids" property="major_ids" />
+        <result column="birthday" property="birthday" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, user_name, mobile, password, salt, nick_name, user_state, is_lock, department_id, is_delete, email, sex, position, create_time, update_time, creator_id, job_state, safe_level, is_leader, last_login_time, login_count, avatar, user_type, unit_id, major_ids, birthday
+    </sql>
+
+</mapper>

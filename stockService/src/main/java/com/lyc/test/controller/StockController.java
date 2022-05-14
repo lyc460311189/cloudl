@@ -37,6 +37,7 @@ public class StockController {
         Map<String,Object> result = new HashMap<>();
         result.put(id+"",10);
         //String returnStr =  restTemplate.getForObject("http://127.0.0.1:8001/createOrder/1",String.class);
+        //把ip地址改为nacos中的服务名称 这样就灵活了  不用关心ip的变化
         String returnStr =  restTemplate.getForObject("http://order-service/createOrder/1",String.class);
         System.out.println(returnStr);
         return result;

@@ -100,19 +100,6 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- mybatis-plus 所需依赖  -->
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.5.1</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-generator</artifactId>
-            <version>3.5.1</version>
-        </dependency>
-
         <dependency>
             <groupId>org.freemarker</groupId>
             <artifactId>freemarker</artifactId>

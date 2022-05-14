@@ -1,5 +1,6 @@
 package com.lyc.test;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
@@ -19,12 +20,16 @@ import org.springframework.web.client.RestTemplate;
 @EnableDiscoveryClient
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 @ComponentScan(basePackages = {"com.lyc"})
+@MapperScan(basePackages = {"com.lyc.test.mapper"})
 public class StockApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(StockApplication.class,args);
     }
 
+
+
+    //加载远程调用类   http方式  可以配置成类似接口的方式
     @Bean
     @LoadBalanced
     public RestTemplate restTemplate() {

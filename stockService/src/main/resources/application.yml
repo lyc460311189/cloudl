@@ -21,3 +21,15 @@ spring:
         max-idle: 16
         max-active: 32
         min-idle: 8
+  mybatis-plus:
+    type-aliases-package: com.lyc.test.model
+    type-aliases-super-type: java.lang.Object
+    configuration:
+      map-underscore-to-camel-case: true
+      cache-enabled: true
+      lazy-loading-enabled: true
+      multiple-result-sets-enabled: true
+      use-generated-keys: true
+      default-statement-timeout: 60
+      default-fetch-size: 100
+    mapper-locations: classpath*:mapper/*.xml
