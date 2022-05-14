@@ -29,7 +29,7 @@ public class CodeCreate {
         //2、生成代码 数据库连接层代码
         genInfo.setAuthor("liyuchun")
                 //设置模块路径 F:\idea_workplace\bishe
-                .setProjectPath("D:\\Dwise\\cloud\\orderService")
+                .setProjectPath("D:\\Dwise\\cloud\\stockService")
                 //设置controller包名
                 .setControllerPackageName("com.lyc.test.controller")
                 //设置service包名
