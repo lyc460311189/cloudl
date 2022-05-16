@@ -33,3 +33,7 @@ spring:
       default-statement-timeout: 60
       default-fetch-size: 100
     mapper-locations: classpath*:mapper/*.xml
+rocketmq:
+  name-server: localhost:9876
+  producer:
+    group: group-test-order

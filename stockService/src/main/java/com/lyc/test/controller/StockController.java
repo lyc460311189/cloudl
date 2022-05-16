@@ -1,6 +1,7 @@
 package com.lyc.test.controller;
 
-import com.lyc.test.RedisUtil;
+import com.lyc.test.util.RedisUtil;
+import com.lyc.test.util.RocketMqUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -31,6 +32,10 @@ public class StockController {
     @Autowired
     private RedisUtil redisUtil;
 
+
+    @Autowired
+    private RocketMqUtil rocketMqUtil;
+
     @RequestMapping(value = "/get/{id}")
     public Object getById(@PathVariable Integer id){
         Assert.notNull(id,"id不能为null");
@@ -50,4 +55,12 @@ public class StockController {
         redisUtil.set("name",name);
         return name;
     }
+
+    @RequestMapping(value = "/test/rocketMq")
+    public Object sendMsg(@RequestParam(required = false) String name){
+        rocketMqUtil.sendMessage("TestTopic",name);
+        System.out.println("发送rocketMq 消息" + name);
+        return name;
+    }
+
 }

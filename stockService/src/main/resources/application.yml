@@ -33,3 +33,7 @@ spring:
       default-statement-timeout: 60
       default-fetch-size: 100
     mapper-locations: classpath*:mapper/*.xml
+rocketmq:  #rocketmq 默认分配的jvm内存较大，要注意，如果启动失败可能是内存太大，可以改小一点
+  name-server: localhost:9876
+  producer:
+    group: group-test-stock

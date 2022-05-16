@@ -1,4 +1,4 @@
-package com.lyc.test;
+package com.lyc.test.util;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * @author liyuchun
  * @version 1.0
- * @description: TODO
+ * @description: redis 工具类  redis连接配置取决于项目中的 yml 文件配置
  * @date 2022/5/13 21:05
  */
 @Component
