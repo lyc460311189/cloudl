@@ -10,8 +10,8 @@ import org.springframework.stereotype.Component;
  * @description: test
  * @date 2022/5/16 11:56
  */
-@Component
-@RocketMQMessageListener(consumerGroup = "group-test-stock", topic = "TestTopic")
+//@Component
+//@RocketMQMessageListener(consumerGroup = "group-test-stock", topic = "TestTopic")
 public class RocketMqConsumerTest  implements RocketMQListener {
 
     @Override

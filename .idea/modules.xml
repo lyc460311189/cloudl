@@ -7,6 +7,8 @@
       <module fileurl="file://$PROJECT_DIR$/getway/getway.iml" filepath="$PROJECT_DIR$/getway/getway.iml" />
       <module fileurl="file://$PROJECT_DIR$/orderService/orderService.iml" filepath="$PROJECT_DIR$/orderService/orderService.iml" />
       <module fileurl="file://$PROJECT_DIR$/stockService/stockService.iml" filepath="$PROJECT_DIR$/stockService/stockService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/userService/userService.iml" filepath="$PROJECT_DIR$/userService/userService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/workeasy-codegen/workeasy-codegen.iml" filepath="$PROJECT_DIR$/workeasy-codegen/workeasy-codegen.iml" />
     </modules>
   </component>
 </project>

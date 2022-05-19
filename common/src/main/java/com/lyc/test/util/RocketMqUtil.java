@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class RocketMqUtil {
 
-    @Autowired
+    //@Autowired
     private RocketMQTemplate rocketMQTemplate;
 
     // 发送消息的实例
